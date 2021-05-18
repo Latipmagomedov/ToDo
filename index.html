@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title>Заметки</title>
+    <link rel="stylesheet" href="assets/css/dark.css" id="theme-style" />
+  </head>
+  <body>
+    <div class="message-error">
+      <div class="message-error__message">
+        <p>Что бы отметить задачу, нужно сначала отметить все подзадачи</p>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__search">
+          <input
+            type="text"
+            class="header__search-inp"
+            placeholder="Поиск задач"
+          />
+          <button class="header__search-icon" id="voice-search"></button>
+        </div>
+
+        <div class="header__tabs">
+          <button class="header__tab header__tab-active">Активные</button>
+          <button class="header__tab">Выполненные</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="add-task">
+        <div class="container">
+          <input
+            type="text"
+            class="add-task__title"
+            placeholder="Заголовок задачи"
+          />
+          <div class="add-task__date-open">
+            <input type="date" min="" class="add-task__date" />
+            <input type="time" class="add-task__time" />
+          </div>
+          <button class="add-task__btn">Добавить задачу</button>
+          <div class="add-task__subtasks">
+            <h2 class="add-task__subtasks-title">Подзадачи</h2>
+            <button class="add-task__subtasks-btn">Добавить подзадачу</button>
+            <div class="add-task__subtasks-wrapper">
+              <!-- <input type="text" placeholder="Подзадача - 1" class="sub-task-inp"> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="tabs">
+        <div class="tab tab-active">
+          <section class="tasks">
+            <div class="container">
+              <h2 class="tasks__title" id="status-1">Все задачи</h2>
+              <div class="tasks__wrapper" id="tasks"></div>
+            </div>
+          </section>
+        </div>
+        <div class="tab">
+          <section class="tasks">
+            <div class="container">
+              <h2 class="tasks__title" id="status-2">Выполненные задачи</h2>
+              <div class="tasks__wrapper" id="past-tasks"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <button class="open-modal-btn">+</button>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
